@@ -30,7 +30,7 @@ class TestExtractData(BaseClass):
         for topic1 in topicsDetails:
             topics_list.append(topic1.text)
 
-        with FileManager('../pytestAssignment/topic&postsDetails/topicDetails.json', 'w') as f:
+        with FileManager('topicDetails.json', 'w') as f:
             json.dump(topics_list, f, indent=1)
 
         self.message_logging("all topics are succesfully fetched")
@@ -48,7 +48,7 @@ class TestExtractData(BaseClass):
         for post1 in postsDetails:
             posts_list.append(post1.text)
 
-        with FileManager('../pytestAssignment/topic&postsDetails/postsDetails.json', 'w') as f:
+        with FileManager('postsDetails.json', 'w') as f:
             json.dump(posts_list, f, indent=1)
 
         self.message_logging("all posts are succesfully fetched")
